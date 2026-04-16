@@ -1,0 +1,12 @@
+ultralytics
+tensorflow
+tensorflow-hub
+tensorflow-model-optimization
+scikit-learn
+pandas
+numpy
+opencv-python
+pillow
+matplotlib
+pyyaml
+tqdm

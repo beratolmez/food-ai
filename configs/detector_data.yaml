@@ -1,0 +1,31 @@
+path: data/detection/yolo
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: pizza
+  1: burger
+  2: sandwich
+  3: doner
+  4: kebap
+  5: kofte
+  6: tavuk
+  7: pilav
+  8: makarna
+  9: noodle
+  10: salata
+  11: corba
+  12: omlet
+  13: yumurta
+  14: patates_kizartmasi
+  15: pide
+  16: lahmacun
+  17: tatli
+  18: pasta
+  19: baklava
+  20: dondurma
+  21: meyve
+  22: sushi
+  23: pancake
+  24: waffle
