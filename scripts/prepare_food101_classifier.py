@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+    stats[f"mapped_{split_name}"] += 1
+
+
 def summarize_split(root: Path) -> Dict[str, int]:
     summary: Dict[str, int] = {}
     if not root.exists():
