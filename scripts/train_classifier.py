@@ -45,8 +45,7 @@ def main() -> None:
     model = build_model(num_classes=len(found_classes))
     compile_model(model, learning_rate=LEARNING_RATE)
 
-    print("
-=== Initial Training ===")
+    print("=== Initial Training ===")
     model.fit(
         train_ds,
         validation_data=val_ds,
@@ -54,8 +53,7 @@ def main() -> None:
         callbacks=get_callbacks(),
     )
 
-    print("
-=== Fine-Tuning ===")
+    print("=== Fine-Tuning ===")
     model = fine_tune_model(model)
     model.fit(
         train_ds,
@@ -73,8 +71,7 @@ def main() -> None:
     print(f"Saved label metadata to: {EXPORT_DIR / 'classifier_labels_v1.json'}")
 
     results = model.evaluate(val_ds, verbose=0)
-    print("
-=== Final Evaluation ===")
+    print("=== Final Evaluation ===")
     for name, value in zip(model.metrics_names, results):
         print(f"{name}: {value:.4f}")
 

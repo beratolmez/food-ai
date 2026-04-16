@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-    stats[f"mapped_{split_name}"] += 1
+stats[f"mapped_{split_name}"] += 1
 
 
 def summarize_split(root: Path) -> Dict[str, int]:
@@ -28,9 +28,7 @@ def main() -> None:
 
     if not images_root.exists():
         raise FileNotFoundError(
-            f"Food-101 images folder not found: {images_root}
-"
-            "Expected structure: data/classification/raw/food101/images/..."
+            f"Food-101 images folder not found: {images_root}""Expected structure: data/classification/raw/food101/images/..."
         )
 
     ensure_dir(PROCESSED_ROOT)
@@ -55,19 +53,16 @@ def main() -> None:
     for entry in test_entries:
         copy_if_mapped(entry, images_root, mapping, "test", stats)
 
-    print("
-=== Preparation Complete ===")
+    print("=== Preparation Complete ===")
     for key, value in stats.items():
         print(f"{key}: {value}")
 
-    print("
-=== Train Split Summary ===")
+    print("=== Train Split Summary ===")
     train_summary = summarize_split(SPLITS_ROOT / "train")
     for class_name, count in train_summary.items():
         print(f"{class_name}: {count}")
 
-    print("
-=== Test Split Summary ===")
+    print("=== Test Split Summary ===")
     test_summary = summarize_split(SPLITS_ROOT / "test")
     for class_name, count in test_summary.items():
         print(f"{class_name}: {count}")
