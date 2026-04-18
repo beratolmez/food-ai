@@ -1,12 +1,12 @@
 # Data
-data/
+/data/
 
 # Training outputs
-runs/
-training/
+/runs/
+/training/
 
 # Exported models
-exports/
+/exports/
 
 # Model files
 *.pt
