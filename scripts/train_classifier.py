@@ -26,7 +26,8 @@ from tqdm import tqdm
 
 # Add project root to sys.path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-sys.path.append(str(PROJECT_ROOT))
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.data.classifier_dataset import FoodClassifierDataset, get_transforms
 from src.models.classifier import create_classifier, freeze_backbone, unfreeze_all
