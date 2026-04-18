@@ -1,8 +1,45 @@
+# Data
 data/
+
+# Training outputs
+runs/
+training/
+
+# Exported models
+exports/
+
+# Model files
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+*.h5
+*.keras
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
 .ipynb_checkpoints/
+
+# Virtual environments
 .venv/
 env/
 venv/
+
+# Environment
 .env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
